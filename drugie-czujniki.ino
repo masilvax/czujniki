@@ -42,6 +42,7 @@ void loop() {
     int waterLevel = readWaterLevel();
 
     displayData(temp, humidity, gasLevel, waterLevel);
+    //sendDataToServer(temp, humidity, gasLevel, waterLevel);
     updateMelodyQueue(temp > 35, humidity > 80, gasLevel > 1000, waterLevel > 20);
   }
   playMelodyQueue();
